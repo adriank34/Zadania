@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Rekrutacja</title>
+    <style>
+        /* Stylizacja formularza (została pominięta w celu skrócenia) */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .form-left {
+            width: 45%;
+        }
+        .form-right {
+            width: 45%;
+        }
+        h2 {
+            text-align: center;
+        }
+        label, input, select {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="email"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="form-left">
+        <h2>Rekrutacja  do Drużyny Koszykarskiej</h2>
+        <form action="/submit" method="post">
+            <label for="imie">Imię:</label>
+            <input type="text" id="imie" name="imie" required>
+
+            <label for="nazwisko">Nazwisko:</label>
+            <input type="text" id="nazwisko" name="nazwisko" required>
+
+            <label for="email">Adres e-mail:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="telefon">Numer telefonu:</label>
+            <input type="tel" id="telefon" name="telefon" required>
+
+            <label for="wiek">Wiek:</label>
+            <input type="number" id="wiek" name="wiek" min="10" required>
+
+            <label for="pozycja">Preferowana pozycja:</label>
+            <select id="pozycja" name="pozycja">
+                <option value="rozgrywajacy">Rozgrywający</option>
+                <option value="rzucajacy">Rzucający</option>
+                <option value="silny">Silny skrzydłowy</option>
+                <option value="skrzydlowy">Skrzydłowy</option>
+                <option value="centrum">Centrum</option>
+            </select>
+
+            <label for="doswiadczenie">Doświadczenie w koszykówce (lata):</label>
+            <input type="number" id="doswiadczenie" name="doswiadczenie" min="0">
+
+            <label for="wzrost">Wzrost (w centymetrach):</label>
+            <input type="number" id="wzrost" name="wzrost" min="140" required>
+
+            <label for="waga">Waga (w kilogramach):</label>
+            <input type="number" id="waga" name="waga" min="30" required>
+
+            <input type="submit" value="Wyślij zgłoszenie">
+        </form>
+    </div>
+    <div class="form-right">
+        <h3>Dodatkowe Informacje</h3>
+        <table>
+            <tr>
+                <th>Informacje</th>
+                <th>Odpowiedź</th>
+            </tr>
+            <tr>
+                <td>Czy masz udokumentowane osiągnięcia sportowe w koszykówce?</td>
+                <td>
+                    <label for="osiagniecia-tak">Tak</label>
+                    <input type="radio" id="osiagniecia-tak" name="osiagniecia" value="tak">
+                    <label for="osiagniecia-nie">Nie</label>
+                    <input type="radio" id="osiagniecia-nie" name="osiagniecia" value="nie">
+                </td>
+            </tr>
+            <tr>
+                <td>Obecna szkoła lub uczelnia:</td>
+                <td><input type="text" id="szkola" name="szkola"></td>
+            </tr>
+            <tr>
+                <td>Poziom wykształcenia:</td>
+                <td>
+                    <select id="wyksztalcenie" name="wyksztalcenie">
+                        <option value="podstawowe">Podstawowe</option>
+                        <option value="srednie">Średnie</option>
+                        <option value="wyzsze">Wyższe</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Długość nóg (w centymetrach):</td>
+                <td><input type="number" id="dlugosc-nog" name="dlugosc-nog" min="50"></td>
+            </tr>
+            <tr>
+                <td>Czy jesteś w stanie zrobić wsada (dunk)?</td>
+                <td>
+                    <label for="wsad-tak">Tak</label>
+                    <input type="radio" id="wsad-tak" name="wsad" value="tak">
+                    <label for="wsad-nie">Nie</label>
+                    <input type="radio" id="wsad-nie" name="wsad" value="nie">
+                </td>
+            </tr>
+        </table>
+        <p>Załącz swoje CV lub inne dokumenty, jeśli to możliwe.</p>
+    </div>
+</div>
+<i><a href="index.html"><font color="red" size="30">Wróć na strone główną</font></a></i>
+<img src=https://raw.githubusercontent.com/adriank34/Zadania/main/nerd.gif align height=200 width=200
+</font>
+</body>
+</html>
